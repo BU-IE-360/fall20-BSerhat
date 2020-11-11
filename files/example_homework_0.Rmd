@@ -1,0 +1,20 @@
+---
+title: "Interesting Forecasting Applications with R"
+author: "Brusk Serhat Solgun - IE360 - Fall 2020"
+---
+```{r,echo=FALSE,results="hide"}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
+
+1. [Time series forecasting using ARIMA models](https://blogs.oracle.com/datascience/introduction-to-forecasting-with-arima-in-r)
+
+    This example is important because it introduces the forecasting methodology using ARIMA models in R. The steps are ...
+
+2.[Earthquake Prediction](https://www.kaggle.com/mahadevmm9/earthquake-prediction)
+
+3.[Election Predictions and other political Forecasting]()
+
+4.[Sales Forecasting]()
+
+5.[Economic forecasting](https://rpubs.com/vincentjjc12/501657)
