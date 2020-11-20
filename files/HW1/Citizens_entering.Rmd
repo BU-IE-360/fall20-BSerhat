@@ -1,0 +1,241 @@
+---
+title: "Citizens Entering"
+output: html_document
+---
+#Number of Turkish citizens entering Turkey each month from 2016 to 2019 
+```{r setup, include=FALSE}
+load(".RData")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Year1 <-c(557683, 626101, 641403, 631516, 752060, 652242, 880228, 647281, 707264, 648563, 566005, 581562)
+
+```{r Year1}
+plot(Year1, type="h", axes = TRUE, xlab="Months", ylab="Citizens Entering")
+```
+
+Year2 <-c(611420, 608313, 677821, 702741, 812614, 779234, 919606, 837828, 756884, 759030, 683622, 737805)
+
+```{r Year2}
+plot(Year2, type="h", axes = TRUE, xlab="Months", ylab="Citizens Entering")
+```
+
+Year3 <-c(704387, 660895, 705252, 728986, 690243, 774829, 816997, 807504, 641295, 634078, 592426, 626541)
+
+```{r Year3}
+plot(Year3, type="h", axes = TRUE, xlab="Months", ylab="Citizens Entering")
+```
+#Popularity of keyword "Dış hatlar geliş" that particular year obtained from Google Trends r(Each week-for Turkey)
+Trends1 <-c(37
+,25
+,30
+,41
+,27
+,33
+,28
+,30
+,25
+,14
+,25
+,39
+,24
+,19
+,31
+,28
+,30
+,34
+,44
+,26
+,42
+,34
+,28
+,33
+,44
+,100
+,68
+,50
+,60
+,38
+,44
+,38
+,44
+,24
+,31
+,25
+,46
+,52
+,50
+,31
+,24
+,25
+,35
+,22
+,25
+,28
+,21
+,30
+,21
+,28
+,24
+,54)
+
+```{r Trends1}
+boxplot(Trends1)
+```
+```{r boxYear1}
+boxplot(Year1)
+```
+Trends2 <-c(45
+,54
+,35
+,28
+,48
+,37
+,36
+,20
+,34
+,22
+,35
+,34
+,35
+,37
+,31
+,27
+,38
+,57
+,36
+,38
+,49
+,29
+,37
+,32
+,39
+,73
+,47
+,59
+,45
+,81
+,67
+,43
+,37
+,54
+,43
+,66
+,52
+,44
+,39
+,39
+,45
+,42
+,37
+,40
+,35
+,39
+,38
+,39
+,35
+,41
+,37
+,33)
+
+```{r Trends2}
+boxplot(Trends2)
+```
+```{r boxYear2}
+boxplot(Year2)
+```
+Trends3 <-c(32
+,37
+,27
+,55
+,34
+,48
+,30
+,23
+,32
+,35
+,50
+,47
+,38
+,34
+,41
+,42
+,32
+,40
+,52
+,32
+,37
+,37
+,45
+,42
+,54
+,44
+,39
+,45
+,75
+,58
+,24
+,50
+,44
+,33
+,56
+,43
+,36
+,38
+,42
+,31
+,31
+,32
+,37
+,25
+,18
+,29
+,20
+,36
+,35
+,33
+,48
+,25)
+
+```{r Trends3}
+boxplot(Trends3)
+```
+```{r boxYear3}
+boxplot(Year3)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,253 @@
+---
+title: "Consumer Price Index for Istanbul"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+load(".RData")
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+#Consumer price index for Istanbul from 2016 until 2019
+#100 for 2003 prices
+
+Year1 <- c(280.29, 280.33, 280.22, 283.18, 284.83, 285.68, 287.81, 287.44, 288.76, 292.83, 294.1, 298.67)
+
+Year2 <- c(304.44, 306.82, 310.08, 314.67, 316.52, 315.73, 316.81, 318, 320.06, 326.75, 330.96, 333.2)
+
+Year3 <- c(335.44, 337.89, 341.98, 348.23, 353.13, 361.6, 364.07, 372.39, 393.7, 403.67, 397.45, 396.37)
+
+```{r Year1, echo=TRUE}
+plot(Year1, type="h", axes = TRUE, xlab="Months", ylab="Price Index")
+
+```
+```{r Year2, echo=TRUE}
+plot(Year2,type="h", axes = TRUE, xlab="Months", ylab="Price Index")
+
+```
+
+
+
+
+```{r Year3, echo=TRUE}
+plot(Year3,type="h", axes = TRUE, xlab="Months", ylab="Price Index")
+
+```
+
+#Popularity of keyword "Enflasyon" that particular year obtained from Google Trends r(Each week-for Istanbul)
+
+Trends1 <-c(29
+, 10 
+, 7
+, 7
+, 12
+, 8
+, 3 
+, 3
+, 10
+, 3
+, 3
+, 3
+, 5
+, 9
+, 6
+, 6
+, 5
+, 8
+, 7
+, 4
+, 6
+, 7
+, 4
+, 4
+, 6
+, 5
+, 13
+, 5
+, 3
+, 4
+, 8
+, 5
+, 4
+, 2
+, 6
+, 8
+, 3
+, 3
+, 3
+, 7
+, 4
+, 4
+, 5
+, 7
+, 5
+, 5
+, 8
+, 8
+, 14
+, 6
+, 5
+, 9)
+
+Trends2 <-c(23
+, 9
+, 6
+, 7
+, 17
+, 9
+, 4
+, 4
+, 14
+, 7
+, 6
+, 6
+, 7
+, 16
+, 5
+, 6
+, 7,
+ 14
+, 7
+, 5
+, 8
+, 14
+, 19
+, 5
+, 6
+, 8
+, 20
+, 4
+, 5
+, 4
+, 9
+, 6
+, 5
+, 3
+, 4
+, 10
+, 4
+, 3
+, 5
+, 11
+, 7
+, 6
+, 5
+, 22
+, 9
+, 8
+, 7
+, 12
+, 26
+, 12
+, 12
+, 16)
+
+Trends3<-c(38
+, 12
+, 9
+, 8
+, 14
+, 13
+, 6
+, 5
+, 9
+, 12
+, 5
+, 7
+, 8
+, 16
+, 8
+, 8 
+, 7
+, 21
+, 10
+, 10
+, 14
+, 16
+, 26
+, 11
+, 10
+, 12
+, 51
+, 14
+, 11
+, 13
+, 30
+, 18
+, 11
+, 7
+, 18
+, 37
+, 17
+, 20
+, 18
+, 70
+, 33
+, 32
+, 24
+, 43
+, 60
+, 23
+, 15
+, 22
+, 60
+, 22
+, 28
+, 31)
+```{r Trends1, echo=TRUE}
+boxplot(Trends1)
+```
+```{r Trends2, echo=TRUE}
+boxplot(Trends2)
+
+```
+```{r Trends3, echo=TRUE}
+boxplot(Trends3)
+
+```
+
+```{r boxYear1, echo=TRUE}
+boxplot(Year1)
+
+```
+
+```{r boxYear2, echo=TRUE}
+boxplot(Year2)
+
+```
+
+
+```{r boxYear3, echo=TRUE}
+boxplot(Year3)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
