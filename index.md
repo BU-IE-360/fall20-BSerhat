@@ -9,3 +9,7 @@
 
 #Homework2
 [Relation between 3 different time series](files/HW2/hw2.html)
+
+#Homework3
+
+[Forecasting of the Consumer Price Index for Alcoholic Beverages and Tobacco Products](files/HW3/html.html)
