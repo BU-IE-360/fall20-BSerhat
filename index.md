@@ -18,4 +18,4 @@
 
 [Stationarity of Electricity Consumption data for Turkey](files/HW4/HW4.html)
 
-[Project report] (files/ProjectReport/ie360_Project.html)
+[Project report] (files/ProjectReport/ie360_Project.htm)
