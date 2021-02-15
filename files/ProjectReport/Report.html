@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="omer yildirim">
+	<META NAME="CREATED" CONTENT="20210215;183100000000000">
+	<META NAME="CHANGEDBY" CONTENT="serhat solgun">
+	<META NAME="CHANGED" CONTENT="20210215;185655300000000">
+	<META NAME="AppVersion" CONTENT="00.0001">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in; margin: 0.98in }
+		P { margin-bottom: 0.08in; direction: ltr; font-size: 11pt; line-height: 107%; widows: 2; orphans: 2 }
+		A:link { color: #0563c1 }
+		A.western:link { so-language: zxx }
+		A.cjk:link { so-language: zxx }
+		A.ctl:link { font-family: "Times New Roman"; so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" LINK="#0563c1" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><IMG SRC="7244dd1e91b087e759c31375a3e7d220_html_bd3836bf.png" ALT="boğaziçi üniversitesi logo ile ilgili görsel sonucu" ALIGN=BOTTOM HSPACE=12 WIDTH=132 HEIGHT=129 BORDER=0></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><FONT SIZE=4 STYLE="font-size: 16pt">IE
+360</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><FONT SIZE=4 STYLE="font-size: 16pt">Statistical
+Forecasting and Time Series</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><FONT SIZE=4 STYLE="font-size: 16pt">Electricity
+Consumption Forecasting</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><FONT SIZE=4>Project
+Report</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in">Ecem Tuana Gençer</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in">2016402012</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in">Brusk Serhat Solgun</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in">2018402162</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in">Ömer Yiğit Yıldırım</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in">2016402036</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.11in"><FONT SIZE=4><B>TABLE OF CONTENTS</B></FONT></P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0.11in">Introduction</P>
+</OL>
+<OL>
+	<OL>
+		<LI><P STYLE="margin-bottom: 0.11in">Problem Definition</P>
+		<LI><P STYLE="margin-bottom: 0.11in">Summary of Proposed Approach</P>
+		<LI><P STYLE="margin-bottom: 0.11in">Descriptive Analysis of the
+		Given Data</P>
+	</OL>
+	<LI><P STYLE="margin-bottom: 0.11in">Related Literature</P>
+	<LI><P STYLE="margin-bottom: 0.11in">Approach</P>
+	<LI><P STYLE="margin-bottom: 0.11in">Results</P>
+	<LI><P STYLE="margin-bottom: 0.11in"><A NAME="_Hlk64231560"></A>Conclusion
+	and Future Work</P>
+	<LI><P STYLE="margin-bottom: 0.11in">Code</P>
+</OL>
+<P STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0.11in"><A NAME="_Hlk64230546"></A><FONT SIZE=4><B>Introduction</B></FONT></P>
+</OL>
+<OL>
+	<OL>
+		<LI><P STYLE="margin-bottom: 0.11in"><B>Problem Definition</B></P>
+	</OL>
+</OL>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+Statistical forecasting is indispensable for electricity consumption.
+The distributor must forecast the consumption values at an hourly
+level to prevent shortage or surplus of electricity. Shortages may
+result in blackouts and surplus of electricity is basically a loss.</P>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+The main task of this project selecting an approach to forecast the
+next day’s hourly consumption values for Turkish electricity
+market. Past hourly consumption data and temperature info is given in
+order to create a model with the chosen approach. This project
+continued for 14 days starting from the first of February, generating
+a 24 hour forecast every morning just after updating the recent
+consumption values from the day before.</P>
+<OL>
+	<OL START=2>
+		<LI><P STYLE="margin-bottom: 0.11in"><B>Summary of Proposed
+		Approach</B></P>
+	</OL>
+</OL>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+The approach for this model contains two phases one for the daily
+level consumption and the other one distributes the mean consumption
+level that was found in the first step to an hourly level. The first
+step is an ARIMA model that takes past consumption values and mean
+temperature values of 7 different locations. 
+</P>
+<P STYLE="margin-bottom: 0.11in; line-height: 150%">	The output of
+the first step is the forecast of the total electricity consumption
+for the next day which will be used as an input for the second step.
+This step forecasts the differences of the hourly consumption values
+from the mean consumption value. The second step does not take
+temperature values as a regressor as their information is contained
+in the mean consumption value. 
+</P>
+<OL>
+	<OL START=3>
+		<LI><P STYLE="margin-bottom: 0.11in"><B>Descriptive Analysis of the
+		Given Data</B></P>
+	</OL>
+</OL>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+The data given includes consumption values at an hourly level and
+mean temperature values for 7 locations. Apparently, these values are
+correlated as the temperature values are used as a regressor to
+explain the consumption rates. Seasonality at different levels is
+also visible for both of these values: Month and year information can
+be used to explain the seasonality for temperature values, basically
+some months are hotter than others. On the other hand, days of the
+week are a very significant information for seasonality of the
+consumption values, and also hours of the day are distributed with
+seasonality which allowed us to make a daily forecast than distribute
+it to an hourly level.</P>
+<OL START=2>
+	<LI><P STYLE="margin-bottom: 0.11in"><FONT SIZE=4><B>Related
+	Literature</B></FONT></P>
+</OL>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+While examining and evaluating various models, Introduction to Time
+Series Analysis and Forecasting, by Montgomery, Jennings, and Kulahci
+has been a guide throughout the process. Whenever we were unsure
+about the statistics behind, we referred to the textbook which is
+available online. DataCamp courses assigned to students in the IE360
+course were studied: Understanding and Interpreting Data. Plotting
+the data, training and test data concepts, exponential smoothing,
+ARIMA models and other advanced methods was studied to shape the
+project model better.</P>
+<OL START=3>
+	<LI><P STYLE="margin-bottom: 0.11in"><FONT SIZE=4><B>Approach</B></FONT></P>
+</OL>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+As mentioned above our approach to this problem consists of two main
+steps the first one is an ARIMA model which takes 7 AR values in
+order to account for the autocorrelation between 7 different lags of
+the consumption variable, 2 moving averages and  mean temperature
+values from 7 different locations. ARIMA (Auto Regressive Integrated
+Moving Average) is a class of models that is utilized to make
+forecasts from a time series data based on the past values, which
+means it describes the autocorrelations that exist in the data. ARIMA
+can be used to build a model for a time series that is non-seasonal,
+exhibits a certain pattern and is not a random white noise. 
+</P>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+<BR><BR>
+</P>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+<BR><BR>
+</P>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+The second step only takes the organized train consumption value as a
+regressor and predicts how far the consumption value for each hour
+will deviate from the mean for that day, the value of which is then
+used to determine the prediction for that hour by adding the
+aforementioned daily prediction divided by 24 .</P>
+<OL START=4>
+	<LI><P STYLE="margin-bottom: 0.11in"><FONT SIZE=4><B>Results<IMG SRC="7244dd1e91b087e759c31375a3e7d220_html_cb54a8c3.gif"></B></FONT></P>
+</OL>
+<P STYLE="margin-left: 0.25in; margin-bottom: 0.11in"> 
+</P>
+<P STYLE="margin-left: 0.25in; margin-bottom: 0.11in; line-height: 150%">
+  The plot above shows our models predictions(black) versus real
+consumption values(red). Note that the predictions are made using our
+latest model and using the data which was available to us at each
+submission. After discovering our first models using auto.arima() for
+daily mean predictions could be improved with an error minimizing
+approach; on later dates we have manually devised an arima model
+aiming to minimize error while checking different orders and
+combinations of ar and ma terms.</P>
+<OL START=5>
+	<LI><P STYLE="margin-bottom: 0.11in"><FONT SIZE=4><B>Conclusion and
+	Future Work</B></FONT></P>
+</OL>
+<P STYLE="text-indent: 0.5in; margin-bottom: 0.11in; line-height: 150%">
+Although it can be said that our devised model performed adequately
+on average, improvements can still be made. We have noticed that our
+model failed to capture certain seasonal effects and as a result, was
+less accurate when said effects were at play. Our model performed
+poorer than expected on weekends and night hours. We believe that if
+we account for these effects better; a more realistic model could be
+devised which would lead to better predictions.</P>
+<OL START=6>
+	<LI><P STYLE="margin-bottom: 0.11in"><FONT SIZE=4><B>Code</B></FONT></P>
+</OL>
+<P STYLE="margin-bottom: 0.11in; line-height: 150%"><A CLASS="western" HREF="https://github.com/BU-IE-360/fall20-BSerhat/tree/gh-pages/files/Project">https://github.com/BU-IE-360/fall20-BSerhat/tree/gh-pages/files/Project</A></P>
+<P STYLE="margin-left: 0.25in; margin-bottom: 0.11in"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+</BODY>
+</HTML>
