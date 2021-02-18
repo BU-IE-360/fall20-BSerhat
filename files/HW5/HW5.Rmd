@@ -1,0 +1,156 @@
+---
+title: "HW5"
+output: html_document
+---
+require(corrplot)
+source("http://www.sthda.com/upload/rquery_cormat.r")
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+load("HW5.RData")
+```
+
+# Introduction
+This script aims to create a model that will forecast an applicant's future sales by finding relevant parameters from a data set including their age, experience, gpa, selling aptitude test score and anxiety test score.
+
+
+# Data
+
+First we look at the correlation matrix and pairwise scatterplots of given data
+```{r Correlation}
+rquery.cormat(data)
+```
+We are seeking to forecast sales figures and we can tell from the correlation matrix that all the variables except the anxiety test score - which has negative correlation- seemingly have a positive correlation with said figure.We need to inspect the pairwise scatterplots to see how relevant these numbers are.
+
+
+```{r Scatter, echo=FALSE}
+pairs(data[,1:6], pch = 19, lower.panel = NULL)
+
+```
+
+Although the correlation matrix shows that anxiety test scores and sales numbers have negative correlation, there is reasonable doubt that they might not necessarily correlate since there are enough outliers.
+The pairwise scatterplot of Experience level and sales numbers are also reason for doubt since the sample size for people with more than 3 years of experience is fairly small.
+
+
+# Stepwise Regression
+Initial_model <- lm(SALES~ AGE, data=data)
+
+step1 <- lm(SALES~ AGE+ APT, data=data) #p=1e-08
+
+step2 <- lm(SALES~ AGE+ ANX, data=data) #p=0.5
+
+step3 <- lm(SALES~ AGE+ GPA, data=data) #p=0.46
+
+step4 <- lm(SALES~ AGE+ EXP, data=data) #p=0.2
+
+anova(Initial_model, step1)
+
+Second_model <-lm(SALES~ AGE+ APT, data=data)
+
+reduced <- lm(SALES~  APT, data=data)
+
+anova(Second_model, reduced) #p=7.9e-11
+
+step2.1 <-lm(SALES~ AGE+ APT+GPA, data=data) #p=0.66
+
+step2.2 <-lm(SALES~ AGE+ APT+ANX, data=data) #p=0.9
+
+step2.3 <-lm(SALES~ AGE+ APT+EXP, data=data) #p=0.95
+
+anova(Second_model, step2.3)
+
+Third_model <-lm(SALES~ AGE+ APT+GPA, data=data)
+
+
+reduced2.1 <- lm(SALES~ APT+GPA, data=data) #p=3.58e-08
+
+reduced2.2 <-lm(SALES~ AGE+GPA, data=data) #p=2.233e-08
+
+anova(Third_model, reduced2.2)
+
+step3.1 <- lm(SALES~ AGE+ APT+GPA+ANX, data=data) #p=0.9
+
+step3.2 <- lm(SALES~ AGE+ APT+GPA+EXP, data=data) #p=0.98
+
+anova(Third_model, step3.2)
+
+Fourth_model <- lm(SALES~ AGE+ APT+GPA+ANX, data=data)
+
+reduced3.1 <- lm(SALES~ AGE+ APT+ANX, data=data) #p=0.6
+
+reduced3.2<-lm(SALES~ AGE+ GPA+ANX, data=data) #p=5.04e-08
+
+reduced3.3<-lm(SALES~  APT+GPA+ANX, data=data) #p=8.2e-08
+
+anova(Fourth_model, reduced3.3)
+
+Reduced_fourth_model <-lm(SALES~ AGE+ APT+ANX, data=data)
+
+step4.1 <-lm(SALES~ AGE+ APT+ANX+EXP, data=data) #p=0.94
+
+anova(Reduced_fourth_model, step4.1)
+
+Fifth_model <-lm(SALES~ AGE+ APT+ANX+EXP, data=data)
+
+reduced4.1 <-lm(SALES~  APT+ANX+EXP, data=data) #p=8.4e-09
+
+reduced4.2 <- lm(SALES~ AGE+ +ANX+EXP, data=data) #p=8.3e-08
+
+reduced4.3 <-lm(SALES~ AGE+ APT+EXP, data=data) #p=0.9
+
+anova(Fifth_model, reduced4.3)
+
+Reduced_fifth_model<-lm(SALES~ AGE+ APT+EXP, data=data)
+
+reduced5.1<-lm(SALES~ AGE+ APT, data=data) #p=0.95
+
+reduced5.2 <-lm(SALES~ AGE+EXP, data=data) #p=4e-08
+
+reduced5.3 <-lm(SALES~  APT+EXP, data=data) #p=3.3e-09
+
+anova(Reduced_fifth_model, reduced5.3)
+
+Final_model <-lm(SALES~ AGE+ APT, data=data)
+
+
+Final model intercept=-83.8, coeff=[5.7,0.2]
+
+# Step function
+Object <-lm(SALES~ EXP+GPA+ANX+AGE+APT, data=data)
+
+step(Object)
+
+formula=>(Sales=AGE+APT),Intercept=-83.8, coeff=(5.7,0.2)
+
+# GPA Significance
+Gpa_model <-lm(SALES~ GPA+AGE+APT, data=data)
+anova(Final_model,Gpa_model) #p.06
+
+# Result
+H0= GPA of an applicant is irrelevant for sales figures
+
+H1= GPA of an applicant is not irrelevant for sales figures
+
+Pvalue=0.6
+
+Probability of obtaining results as extreme as we did under h0 is %60 which is not enough to reject h0 so we can conclude that an applicants gpa is irrelevant
+
+
+
+data <- read.table("C:\\Users\\bjkse\\Desktop\\HW5\\sales.txt", header=T)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
